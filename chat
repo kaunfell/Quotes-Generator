@@ -1,0 +1,76 @@
+const quotesJaNames = {
+    calm: {
+Plato: 'Kyllä vain hyvä on',
+tyyppi2: 'jee',
+    },
+    strong: {
+Plato: 'jes!',
+tyyppi2: 'Good day',
+    }
+
+}
+
+const philosophers = {
+    Plato: 'dude from past',
+    tyyppi2: 'He is another philosopher'
+}
+
+
+
+
+
+
+   var randomCalm= ()  => {
+
+    var calmQuotes = quotesJaNames.calm;
+    var keys = Object.keys(calmQuotes);
+    let randomKey = keys[Math.floor(Math.random() * keys.length)];
+    let lopullinen = calmQuotes[randomKey];
+
+    if (philosophers[randomKey]){
+        console.log(`"${lopullinen}" - ${randomKey}`)
+        console.log(`Author Info: ${philosophers[randomKey]}`)
+    }
+    else {
+        console.log(`${randomKey}: ${lopullinen}`)
+    }
+
+  };
+
+
+
+var randomStrong= () => {
+    var strongQuotes = quotesJaNames.strong;
+    var keys = Object.keys(strongQuotes);
+    var randomKey = keys[Math.floor(Math.random() * keys.length)];
+    let lopullinen = strongQuotes[randomKey]; 
+
+        if(philosophers[randomKey]) {
+            console.log(`"${lopullinen}" - ${randomKey}`)
+            console.log(`Author Info: ${philosophers[randomKey]}`)
+        }
+        else {
+            
+        }
+
+  };
+
+
+
+const chooseCategory = (category) => {
+
+    if (category === 'calm'){
+     return randomCalm;
+      
+    } 
+    else if (category === 'strong'){
+       return randomStrong;
+    }
+    else {
+        console.log('choose category')
+    }
+}
+
+
+const selectCategory = chooseCategory('calm');
+selectCategory();
