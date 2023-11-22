@@ -10,5 +10,5 @@ object and return it with the name of the author. ChatGPT was used to:
 make few changes on how to collect the object keys and create if-else-statements in functions to return the name of the author
 after the desired random quote is generated.
 
-Next I am trying to learn how to make HTML pages with JavaScript so I could improve this project. 
+Next I am trying to learn more about git and how to make HTML pages with JavaScript so I could improve this project. 
 I would also like to learn a way to merge the 3 functions.
