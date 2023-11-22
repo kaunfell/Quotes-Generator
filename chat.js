@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+// 1. Object containing the quotes and authors:
 const quotesJaNames = {
     calm: {
 Seneca: 'We suffer more often in imagination than in reality.',
@@ -26,11 +26,8 @@ const authors = {
 }
 
 
-
-
-
-
-   const randomCalm= ()  => {
+// A function to calm quotes:
+const randomCalm= ()  => {
 
     const calmQuotes = quotesJaNames.calm;
     const keys = Object.keys(calmQuotes);
@@ -42,13 +39,12 @@ const authors = {
         console.log(`Author Info: ${authors[randomKey]}`)
     }
     else {
-        console.log(`${randomKey}: ${lopullinen}`)
+        console.log(`${randomKey}: ${finalQuote}`)
     }
 
-  };
+ };
 
-
-
+// A function to strong quotes:
 const randomStrong= () => {
     const strongQuotes = quotesJaNames.strong;
     const keys = Object.keys(strongQuotes);
@@ -60,12 +56,12 @@ const randomStrong= () => {
             console.log(`Author Info: ${authors[randomKey]}`)
         }
         else {
-            
+            console.log(`${randomKey}: ${finalQuote}`)            
         }
 
   };
 
-
+// A function to inspirational quotes:
   const randomInspirational= () => {
     const inspirationalQuotes = quotesJaNames.inspirational;
     const keys = Object.keys(inspirationalQuotes);
@@ -77,12 +73,12 @@ const randomStrong= () => {
             console.log(`Author Info: ${authors[randomKey]}`)
         }
         else {
-            
+            console.log(`${randomKey}: ${finalQuote}`)            
         }
   };
 
 
-
+// The final function that returns functions based on desired category:
 const chooseCategory = (category) => {
 
     if (category === 'calm'){
@@ -103,81 +99,3 @@ const chooseCategory = (category) => {
 
 const selectCategory = chooseCategory('inspirational');
 selectCategory();
-=======
-const quotesJaNames = {
-    calm: {
-Plato: 'Kyllä vain hyvä on',
-tyyppi2: 'jee',
-    },
-    strong: {
-Plato: 'jes!',
-tyyppi2: 'Good day',
-    }
-
-}
-
-const philosophers = {
-    Plato: 'dude from past',
-    tyyppi2: 'He is another philosopher'
-}
-
-
-
-
-
-
-   var randomCalm= ()  => {
-
-    var calmQuotes = quotesJaNames.calm;
-    var keys = Object.keys(calmQuotes);
-    let randomKey = keys[Math.floor(Math.random() * keys.length)];
-    let lopullinen = calmQuotes[randomKey];
-
-    if (philosophers[randomKey]){
-        console.log(`"${lopullinen}" - ${randomKey}`)
-        console.log(`Author Info: ${philosophers[randomKey]}`)
-    }
-    else {
-        console.log(`${randomKey}: ${lopullinen}`)
-    }
-
-  };
-
-
-
-var randomStrong= () => {
-    var strongQuotes = quotesJaNames.strong;
-    var keys = Object.keys(strongQuotes);
-    var randomKey = keys[Math.floor(Math.random() * keys.length)];
-    let lopullinen = strongQuotes[randomKey]; 
-
-        if(philosophers[randomKey]) {
-            console.log(`"${lopullinen}" - ${randomKey}`)
-            console.log(`Author Info: ${philosophers[randomKey]}`)
-        }
-        else {
-            
-        }
-
-  };
-
-
-
-const chooseCategory = (category) => {
-
-    if (category === 'calm'){
-     return randomCalm;
-      
-    } 
-    else if (category === 'strong'){
-       return randomStrong;
-    }
-    else {
-        console.log('choose category')
-    }
-}
-
-
-const selectCategory = chooseCategory('calm');
-selectCategory();
->>>>>>> b1b8bb72ccc166fcb8c7f7e002edcdb66dd5f1d4
